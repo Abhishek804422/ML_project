@@ -59,16 +59,23 @@ export default function EarthquakePrediction() {
   }
 
   return (
-    <div className="container mx-auto py-8 px-4">
-      <div className="flex flex-col items-center justify-center mb-8 text-center">
-        <div className="flex items-center gap-2 mb-2">
-          <Waveform className="h-8 w-8 text-rose-600" />
-          <h1 className="text-3xl font-bold tracking-tight">Earthquake Prediction</h1>
-        </div>
-        <p className="text-muted-foreground max-w-2xl">
-          Upload seismic signal data to predict the time to failure using machine learning
-        </p>
-      </div>
+   // components/Header.js
+import React from 'react';
+
+export const Header = () => (
+  <header style={{ padding: '20px', textAlign: 'center', backgroundColor: '#f5f5f5' }}>
+    <h1>Earthquake Prediction</h1>
+    <p style={{ fontSize: '18px', color: '#666' }}>
+      Predict the time to failure from seismic signals using deep learning.
+    </p>
+  </header>
+);
+// components/SectionDivider.js
+export const SectionDivider = ({ title }) => (
+  <div style={{ borderBottom: '2px solid #ddd', margin: '20px 0' }}>
+    <h2>{title}</h2>
+  </div>
+);
 
       <div className="max-w-4xl mx-auto">
         {error && (
